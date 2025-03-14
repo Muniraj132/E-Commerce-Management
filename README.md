@@ -4,7 +4,7 @@
 
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/your-repository.git
+   git clone https://github.com/Muniraj132/E-Commerce-Management.git
    cd your-repository
    ```
 
@@ -43,7 +43,7 @@
 
 6. **Run database migrations**
    ```sh
-   php artisan migrate
+   php artisan migrate --seed
    ```
 
 7. **Run the development server**
