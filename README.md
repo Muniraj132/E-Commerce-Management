@@ -67,5 +67,5 @@ password: password
 ### User
 ```sh
 email: user@user.com
-password:
+password: password
 ```
