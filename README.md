@@ -57,4 +57,15 @@
   ```sh
   php artisan storage:link
   ```
+## User Credentials
+### Admin
+```sh
+email: admin@admin.com
+password: password
+```
 
+### User
+```sh
+email: user@user.com
+password:
+```
