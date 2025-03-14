@@ -43,7 +43,7 @@
 
 6. **Run database migrations**
    ```sh
-   php artisan migrate
+   php artisan migrate --seed
    ```
 
 7. **Run the development server**
