@@ -1,4 +1,4 @@
-// Only display orders to screen readers
+// Only display content to screen readers
 //
 // See: https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
 // See: https://hugogiraudel.com/2016/10/13/css-hide-and-seek/
@@ -15,9 +15,9 @@
   border: 0;
 }
 
-// Use in conjunction with .sr-only to only display orders when it's focused.
+// Use in conjunction with .sr-only to only display content when it's focused.
 //
-// Useful for "Skip to main orders" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
 //
 // Credit: HTML5 Boilerplate
 

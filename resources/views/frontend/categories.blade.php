@@ -11,9 +11,9 @@
     <div class="row">
         @foreach ($categories as $category)
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="{{ route('products') }}"><img src="./assets/img/category_img_01.jpg" class="rounded-circle img-fluid border"></a>
+                <a href="{{ route('shop') }}"><img src="{{ asset($category->category_image)  }}" class="rounded-circle img-fluid border"></a>
                 <h5 class="text-center mt-3 mb-3">{{ $category->name }}</h5>
-                <p class="text-center"><a href="{{ route('products', ['categories' => [$category->id]]) }}" class="btn btn-success">Go Shop</a></p>
+                <p class="text-center"><a href="{{ route('shop', ['categories' => [$category->id]]) }}" class="btn btn-success">Go Shop</a></p>
             </div>
         @endforeach
     </div>

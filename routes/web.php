@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/products', [ProductController::class, 'products'])->name('products');
+Route::get('/shop', [ProductController::class, 'products'])->name('shop');
 
 Route::get('/product/{slug}', [ProductController::class, 'productShow'])->name('product');
 
@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('orders', [ProductController::class, 'orders'])->name('orders');
 });
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth','access']], function () {
-    
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

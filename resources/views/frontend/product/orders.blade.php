@@ -36,22 +36,22 @@
                                                 <td>{{ $order->quantity }}</td>
                                                <td>{{  $order->total_amount}}</td>
                                               <td class="align-middle">
-                                            @php
-                                            $badgeClass = '';
-                                            switch($order->status) {
-                                                case 'pending':
-                                                    $badgeClass = 'text-warning';
-                                                    break;
-                                                case 'shipped':
-                                                    $badgeClass = 'text-info';
-                                                    break;
-                                                case 'delivered':
-                                                    $badgeClass = 'text-success';
-                                                    break;
-                                            }
-                                            @endphp 
-                                        <span class="badge {{ $badgeClass }}">{{ ucfirst($order->status) }}</span>
-                                    </td>
+                                                    @php
+                                                        $badgeClass = '';
+                                                        switch($order->status) {
+                                                            case 'pending':
+                                                                $badgeClass = 'text-primary';
+                                                                break;
+                                                            case 'shipped':
+                                                                $badgeClass = 'text-secondary';
+                                                                break;
+                                                            case 'delivered':
+                                                                $badgeClass = 'text-success';
+                                                                break;
+                                                        }
+                                                    @endphp
+                                                    <span class="badge {{ $badgeClass }}">{{ ucfirst($order->status) }}</span>
+                                                </td>
                                             </tr>
                                         @endforeach
                                         <tr>

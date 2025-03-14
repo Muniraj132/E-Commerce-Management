@@ -7,7 +7,7 @@
                     <b>Thank you for shopping with us!</b>
                 </p>
                 <p class="pb-4">Your order has been confirmed. Your order number is: <b>{{ $order->order_number ?? '' }}</b></p>
-                <a href="{{ route('products') }}" class="btn btn-success">Continue Shopping</a>
+                <a href="{{ route('shop') }}" class="btn btn-success">Continue Shopping</a>
             </div>
         </div>
     </section>

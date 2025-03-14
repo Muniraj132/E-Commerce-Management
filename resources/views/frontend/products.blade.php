@@ -3,9 +3,9 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-3">
-                <form id="categoryFilterForm" method="GET" action="{{ route('products') }}">
+                <form id="categoryFilterForm" method="GET" action="{{ route('shop') }}">
                     <h1 class="h2 pb-4">Categories</h1>
-                    <a href="{{ route('products') }}" class="btn-outline">Clear Filter</a>
+                    <a href="{{ route('shop') }}" class="btn-outline">Clear Filter</a>
                     <ul class="list-unstyled templatemo-accordion mt-4">
                         @foreach($categories as $category)
                             <li class="pb-3">
@@ -24,7 +24,7 @@
                         <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/shop_01.jpg">
+                                <img class="card-img rounded-0 img-fluid" src="{{ asset($product->image) }}">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white mt-2" href="{{ route('product', ['slug' => $product->slug]) }}" title="View"><i class="far fa-eye"></i></a></li>

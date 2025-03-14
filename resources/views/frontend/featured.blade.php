@@ -14,20 +14,20 @@
             @foreach($featuredProducts as $product)
             <div class="col-12 col-md-4 mb-4">
                 <div class="card h-100">
-                    <a href="{{ route('product', ['slug' => $product->slug]) }}">
-                    <img src="./assets/img/feature_prod_01.jpg" class="card-img-top" alt="...">
+                    <a href="{{ route('shop', ['slug' => $product->slug]) }}">
+                    <img src="{{ asset($product->image) }}" class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
                         <a href="{{ route('product', ['slug' => $product->slug]) }}" class="h2 text-decoration-none text-dark">{{ $product->name }}</a>
                         <p class="text-left mt-2">₹ {{ $product->price }}</p>
-                        <p class="text-center"><a href="{{ route('product', ['slug' => $product->slug]) }}" class="btn btn-sm btn-primary">View</a></p>
+                        <p class="text-center"><a href="{{ route('shop', ['slug' => $product->slug]) }}" class="btn btn-sm btn-primary">View</a></p>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
         <div class="text-center">
-            <p class=""><a href="{{ route('products') }}" class="btn btn-success">View All</a></p>
+            <p class=""><a href="{{ route('shop') }}" class="btn btn-success">View All</a></p>
         </div>
     </div>
 </section>
